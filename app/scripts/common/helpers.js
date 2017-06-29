@@ -22,7 +22,7 @@ function UIHelperMethods() {
           if (UIBlocked === 0) {
               UIBlocked++;
               $.blockUI({
-                  message: '<div><span class="fa fa-spinner fa-spin"></span></div>'
+                  message: '<div><span class="glyphicon glyphicon-repeat fast-right-spinner"></span></div>'
               });
           } else {
               UIBlocked++;
