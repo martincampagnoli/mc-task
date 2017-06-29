@@ -1,3 +1,6 @@
+/*globals $*/
+'use strict';
+
 function UIHelperMethods() {
   var UIBlocked = 0;
   $.blockUI.defaults.css = {

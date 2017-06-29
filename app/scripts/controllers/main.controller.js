@@ -27,6 +27,4 @@ angular.module('mcTaskApp')
     						}
     					);
     			};
-
-    $scope.getAds();
   });
