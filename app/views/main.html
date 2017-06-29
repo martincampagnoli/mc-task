@@ -1,17 +1,24 @@
 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4" ng-repeat="ad in ads | limitTo:quantity">
   <div class="team-wrapper">
+    <span class="tag" ng-show="ad.advertisementPrice.baseRent">Mieten</span>
+    <span class="tag" ng-show="ad.advertisementPrice.sellPrice && !ad.advertisementPrice.baseRent">Kaufen</span>
     <div class="team-inner" style="background-image: url('{{ad.advertisementAssets[0].advertisementThumbnails.inventory_m.url}}')">
     </div>
      <div class="description">
 		     <h4> {{ ad.title }} </h3>
-         <h5> TBD  </h3>
+         <h5 ng-show="ad.userWishes.visibleAddress"> {{ad.realestateSummary.address.postalCode}} {{ad.realestateSummary.address.city}}   </h3>
 			</div>
       <br>
-      <div class="real-info description col-lg-12">
-        <div class="col-lg-4"><b>{{ ad.advertisementPrice.baseRent }} €</b></div>
+      <div class="real-info col-lg-12">
+        <div class="col-lg-4" ng-show="ad.advertisementPrice.baseRent">
+          <b>{{ ad.advertisementPrice.baseRent }} €</b>
+        </div>
+        <div class="col-lg-4" ng-show="ad.advertisementPrice.sellPrice && !ad.advertisementPrice.baseRent">
+          <b>{{ ad.advertisementPrice.sellPrice }} €</b>
+        </div>
         <div class="col-lg-8">
-          {{ ad.realestateSummary.numberOfRooms }} Zimmer&nbsp;&nbsp;&nbsp;&nbsp;|
-          ab {{ ad.realestateSummary.space | number:1 }} m2
+            <span class="pull-right">{{ ad.realestateSummary.numberOfRooms }} Zimmer |
+          ab {{ ad.realestateSummary.space | number:1 }} m2 </span>
         </div>
       </div>
   </div>
