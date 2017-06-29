@@ -3,7 +3,16 @@
     <div class="team-inner" style="background-image: url('{{ad.advertisementAssets[0].advertisementThumbnails.inventory_m.url}}')">
     </div>
      <div class="description">
-		     <h3 class="ng-binding"> {{ ad.title }} </h3>
+		     <h4> {{ ad.title }} </h3>
+         <h5> TBD  </h3>
 			</div>
+      <br>
+      <div class="real-info description col-lg-12">
+        <div class="col-lg-4"><b>{{ ad.advertisementPrice.baseRent }} €</b></div>
+        <div class="col-lg-8">
+          {{ ad.realestateSummary.numberOfRooms }} Zimmer&nbsp;&nbsp;&nbsp;&nbsp;|
+          ab {{ ad.realestateSummary.space | number:1 }} m2
+        </div>
+      </div>
   </div>
 </div>
