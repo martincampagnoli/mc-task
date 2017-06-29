@@ -1,13 +1,6 @@
 // bower:scss
 // endbower
 
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
-}
-
 body {
   padding: 0;
 }
@@ -34,56 +27,72 @@ body {
   }
 }
 
-/* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
+
+
+.team-wrapper {
+border-left: #ddd 1px solid;
+border-right: #ddd 1px solid;
+border-bottom: #ddd 1px solid;
+overflow-x: hidden;
+position: relative;
+-webkit-transition: all 0.2s ease;
+-moz-transition: all 0.2s ease;
+-ms-transform: all 0.2s ease;
+-o-transition: all 0.2s ease;
+transition: all 0.2s ease;
+margin-bottom:30px;
+height: 400px;
+}
+.team-wrapper:hover {
+-webkit-transform: scale(1.1);
+-moz-transform: scale(1.1);
+-ms-transform: scale(1.1);
+-o-transform: scale(1.1);
+transform: scale(1.1);
+}
+.team-wrapper .team-inner {
+background-size: cover;
+background-position: center;
+-moz-background-size: cover;
+-webkit-background-size: cover;
+padding: 150px 0 10px;
 }
 
-.container-narrow > hr {
-  margin: 30px 0;
+.team-wrapper > .team-inner > a {
+color: rgb(57, 171, 111);
+width: 80px;
+height: 80px;
+border-radius: 50%;
+-moz-border-radius: 50%;
+-webkit-border-radius: 50%;
+margin: 0 auto -50px;
+display: block;
+color: rgb(57, 171, 111);
+z-index: 999;
+font-size: 40px;
+padding: 15px 22px;
+background-color: #fff;
+-webkit-transition: all 0.8s ease-in-out;
+-moz-transition: all 0.8s ease-in-out;
+-o-transition: all 0.8s ease-in-out;
+transition: all 0.8s ease-in-out;
 }
 
-/* Main marketing message and sign up button */
-.jumbotron {
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-
-  .btn {
-    font-size: 21px;
-    padding: 14px 24px;
-  }
+.team-wrapper > .team-inner > a:hover {
+color: #fff;
+text-decoration: none;
+background-color: rgb(57, 171, 111);
 }
 
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
 
-  p + h4 {
-    margin-top: 28px;
-  }
+.team-wrapper .description {
+padding: 30px 20px 20px;
+text-align: center;
+border-bottom: 1px solid #fff;
+border-right: 1px solid #fff;
+border-left: 1px solid #fff;
 }
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
-
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
-  }
+.team-wrapper .description h5 {
+color: rgb(57, 171, 111);
 }
