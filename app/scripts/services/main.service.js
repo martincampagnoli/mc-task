@@ -9,8 +9,8 @@
  * Service of the mcTaskApp
  */
 angular.module('mcTaskApp')
-  .service('MainService', ['$q', '$http', '$sce',
-    function ($q, $http, $sce) {
+  .service('MainService', ['$q', '$http',
+    function ($q, $http) {
         return {
     			getAds: function () {
     					var url = "https://api.mcmakler.de/v1/advertisements",

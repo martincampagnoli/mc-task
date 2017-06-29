@@ -12,14 +12,13 @@ angular.module('mcTaskApp')
     $scope.ads = [];
     $scope.quantity = 10;
     $scope.getAds = function(){
-    				  //UIHelper.blockUI();
+    				  UIHelper.blockUI();
     					MainService.getAds().then(function(response){
-                  console.dir(response.data.data);
                   $scope.ads = response.data.data;
-    					       //UIHelper.unblockUI();
+    					       UIHelper.unblockUI();
     						},
     						function(error){
-                    //UIHelper.unblockUI();
+                    UIHelper.unblockUI();
     						}
     					);
     			};
