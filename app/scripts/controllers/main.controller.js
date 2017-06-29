@@ -1,3 +1,4 @@
+/*globals UIHelper*/
 'use strict';
 
 /**
@@ -11,14 +12,18 @@ angular.module('mcTaskApp')
   .controller('MainCtrl', function ($scope, MainService) {
     $scope.ads = [];
     $scope.quantity = 10;
+    $scope.loaded = false;
     $scope.getAds = function(){
     				  UIHelper.blockUI();
     					MainService.getAds().then(function(response){
                   $scope.ads = response.data.data;
-    					       UIHelper.unblockUI();
+                  $scope.loaded = true;
+    					    UIHelper.unblockUI();
     						},
     						function(error){
-                    UIHelper.unblockUI();
+                  console.dir(error);
+                  $scope.loaded = true;
+                  UIHelper.unblockUI();
     						}
     					);
     			};
