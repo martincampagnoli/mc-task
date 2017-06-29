@@ -1,4 +1,3 @@
-
 'use strict';
 
 /**
@@ -9,7 +8,7 @@
  * Service of the mcTaskApp
  */
 angular.module('mcTaskApp')
-  .service('MainService', ['$q', '$http',
+  .service('MainService',
     function ($q, $http) {
         return {
     			getAds: function () {
@@ -22,5 +21,4 @@ angular.module('mcTaskApp')
     					return deferred.promise;
     			},
         };
-    }
-]);
+    });
